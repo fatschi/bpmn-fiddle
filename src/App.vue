@@ -19,8 +19,8 @@ let cleanupFn = null
 const urlBytes = computed(() => new Blob([shareUrl.value]).size)
 const urlKb    = computed(() => (urlBytes.value / 1024).toFixed(1))
 const sizeLevel = computed(() => {
-  if (urlBytes.value < 4000) return 'good'
-  if (urlBytes.value < 8000) return 'warn'
+  if (urlBytes.value < 10000) return 'good'
+  if (urlBytes.value < 25000) return 'warn'
   return 'bad'
 })
 
